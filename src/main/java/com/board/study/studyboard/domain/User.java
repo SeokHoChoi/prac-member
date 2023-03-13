@@ -31,6 +31,9 @@ public class User {
     @Column(name = "nickname", length = 50)
     private String nickname;
 
+    @Column(name = "email", length = 100, unique = true)
+    private String email;
+
     @JsonIgnore
     @Column(name = "activated")
     private boolean activated;

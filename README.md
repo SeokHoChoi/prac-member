@@ -14,3 +14,5 @@ Member 관련 기본 API 연습을 위한 Repository
 * [회원 탈퇴] DELETE /api/user
 * [나의 회원정보 조회 - 모든 권한] GET /api/user
 * [모든 사용자정보 조회 - ADMIN 권한] GET /api/user/{username}
+* [회원아이디 찾기]
+* [회원비밀번호 재설정]

@@ -36,6 +36,7 @@ public class UserService {
                 .username(userDto.getUsername())
                 .password(passwordEncoder.encode(userDto.getPassword()))
                 .nickname(userDto.getNickname())
+                .email(userDto.getEmail())
                 .activated(true)
                 .authorities(Collections.singleton(authority))
                 .build();
@@ -44,9 +45,10 @@ public class UserService {
     }
 
     @Transactional
-    public void updateUserNickname(String username, String nickname) {
+    public void updateUserInfo(String username, String nickname, String email) {
         userRepository.findOneWithAuthoritiesByUsername(username).ifPresent(user -> {
             user.setNickname(nickname);
+            user.setEmail(email);
             userRepository.save(user);
         });
     }

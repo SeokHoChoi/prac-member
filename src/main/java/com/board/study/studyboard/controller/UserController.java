@@ -41,7 +41,7 @@ public class UserController {
     @PutMapping("/user/{username}")
     public ResponseEntity<Void> updateMember(@PathVariable String username,
                                              @RequestBody UpdateMemberRequest request) {
-        userService.updateUserNickname(username, request.getNickname());
+        userService.updateUserInfo(username, request.getNickname(), request.getEmail());
         return ResponseEntity.noContent().build();
     }
 
@@ -49,6 +49,7 @@ public class UserController {
     @Getter
     static class UpdateMemberRequest {
         private String nickname;
+        private String email;
     }
 
     @GetMapping("/user")
