@@ -7,6 +7,15 @@ Member 관련 기본 API 연습을 위한 Repository
 - 간단한 게시판을 만들어 유저의 게시글 사용 테스트
 
 
+### virsion
+- SpringBoot 3.0.4
+- java 17
+- jsonwebtoken 0.11.2
+- data-jpa 3.0.4
+- security 3.0.4
+- validation 3.0.4
+- mysql 8.0.32
+
 ### Member API
 * [회원가입] : POST /api/signup
 * [로그인] : POST /api/authenticate
